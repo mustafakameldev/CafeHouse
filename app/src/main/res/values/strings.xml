@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">CafeHouse</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="typeEmail">type email</string>
+    <string name="typePassword">type password</string>
+    <string name="empty">email and password both are required</string>
+    <string name="loginKey">login</string>
+    <string name="title_activity_live">LiveActivity</string>
+    <string name="menu">menu </string>
+    <string name="hintItemName">name..</string>
+    <string name="hintPrice">price..</string>
+    <string name="addItem">add Item</string>
+    <string name="bills">bills</string>
+    <string name="orders">orders</string>
+    <string name="dataItemRequired">please add name and price </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_home">Home</string>
+    <string name="shortcuts">shortcuts</string>
+
 </resources>
