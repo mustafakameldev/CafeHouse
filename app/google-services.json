@@ -49,37 +49,6 @@
           "status": 2
         }
       }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:711989444799:android:21e1fd7a08b715cb",
-        "android_client_info": {
-          "package_name": "com.mospro.cafehouse"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "711989444799-nnkio3nrap4tf1teljmg5g6n970irna7.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDW4uIb9BFCj6FFar8Q1Sok4zoYPPBS8Sk"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
     }
   ],
   "configuration_version": "1"
