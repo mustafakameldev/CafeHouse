@@ -1,0 +1,86 @@
+{
+  "project_info": {
+    "project_number": "711989444799",
+    "firebase_url": "https://coffee-8125d.firebaseio.com",
+    "project_id": "coffee-8125d",
+    "storage_bucket": "coffee-8125d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711989444799:android:1f862a37d348293b",
+        "android_client_info": {
+          "package_name": "com.esimple.coffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711989444799-riej8kujpf5ljdu6k61vrlphj3mbqqlr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.esimple.coffee",
+            "certificate_hash": "550bc512e375ed3283205bc8db578ee9a1027fe6"
+          }
+        },
+        {
+          "client_id": "711989444799-nnkio3nrap4tf1teljmg5g6n970irna7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW4uIb9BFCj6FFar8Q1Sok4zoYPPBS8Sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "711989444799-nnkio3nrap4tf1teljmg5g6n970irna7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:711989444799:android:21e1fd7a08b715cb",
+        "android_client_info": {
+          "package_name": "com.mospro.cafehouse"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "711989444799-nnkio3nrap4tf1teljmg5g6n970irna7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDW4uIb9BFCj6FFar8Q1Sok4zoYPPBS8Sk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
