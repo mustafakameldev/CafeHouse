@@ -23,4 +23,11 @@
     <string name="title_home">Home</string>
     <string name="shortcuts">shortcuts</string>
     <string name="app_name">Cafe</string>
+    <string name="welcome">You are Welcome</string>
+    <string name="welcomeMessage">before go and starting you have to type your cafe name and numbers of tables</string>
+    <string name="nameHint">type your cafe name</string>
+    <string name="name">name</string>
+    <string name="tableNo">table number</string>
+    <string name="tableNoHint">type number</string>
+    <string name="next">next</string>
 </resources>

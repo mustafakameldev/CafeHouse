@@ -9,4 +9,14 @@
         android:title="@string/menu"
         app:showAsAction="always"
         />
+    <item
+        android:id="@+id/users_action"
+        android:title="attendance"
+        app:showAsAction="never"
+        />
+    <item
+        android:id="@+id/settings_action"
+        android:title="@string/action_settings"
+        app:showAsAction="never"
+        />
 </menu>

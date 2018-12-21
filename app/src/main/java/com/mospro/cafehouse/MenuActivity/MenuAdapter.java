@@ -14,23 +14,17 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.mospro.cafehouse.DataTypes.Item;
 import com.mospro.cafehouse.R;
-
 import java.util.ArrayList;
 import java.util.List;
-
-
 public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHolder> {
-
     private Context context ;
     private ArrayList<Item> items ;
     public MenuAdapter(Context mCntx, ArrayList<Item> productList) {
         this.context = mCntx;
         this.items = productList;
     }
-
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
@@ -61,7 +55,6 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHol
             public void onClick(View v) {
                 if (!TextUtils.isEmpty(productViewHolder.itemsNo.getText().toString()))
                 {
-
                     Double no = Double.valueOf(productViewHolder.itemsNo.getText().toString());
                     if (no == 0)
                     {
@@ -69,14 +62,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHol
                         no = no - 1;
                     }
                     productViewHolder.itemsNo.setText(no.toString());
-
                 }
-
             }
         });
-
     }
-
     @Override
     public int getItemCount() {
         return items.size();

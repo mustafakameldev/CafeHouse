@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:711989444799:android:1f862a37d348293b",
         "android_client_info": {
-          "package_name": "com.esimple.coffee"
+          "package_name": "com.mospro.cafehouse"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "711989444799-riej8kujpf5ljdu6k61vrlphj3mbqqlr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.esimple.coffee",
+            "package_name": "com.mospro.cafehouse",
             "certificate_hash": "550bc512e375ed3283205bc8db578ee9a1027fe6"
           }
         },
