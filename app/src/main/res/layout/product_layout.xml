@@ -1,86 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="horizontal"
-        android:background="#d1caca"
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp">
 
-        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#d1caca"
+            android:orientation="horizontal"
 
-        <FrameLayout
-            android:layout_width="100dp"
-            android:layout_height="match_parent"
             >
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="240dp"
                 android:layout_height="match_parent"
-                app:srcCompat="@drawable/common_google_signin_btn_icon_dark_normal" />
-        </FrameLayout>
+                android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="240dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tv_name_ProductLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingBottom="10dp"
+                    android:text="name"
+                    android:textSize="24sp" />
 
-            <TextView
-                android:id="@+id/tv_name_ProductLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="5dp"
-                android:paddingBottom="10dp"
-                android:text="name"
-                android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/tv_price_ProductLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="20dp"
+                    android:text="price" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/tv_price_ProductLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="price" />
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/incrBtn_ProductLayout"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@android:drawable/ic_menu_add" />
+
+                <EditText
+                    android:id="@+id/editText_ProductNo_ProductLayout"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/edittext_background"
+                    android:ems="10"
+
+                    android:inputType="numberSigned"
+                    android:paddingLeft="15dp"
+                    android:text="0" />
+
+                <ImageButton
+                    android:id="@+id/decrBtn_ProductLayout"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    app:srcCompat="@android:drawable/ic_menu_info_details" />
+            </LinearLayout>
+
         </LinearLayout>
+    </android.support.v7.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <ImageButton
+        android:id="@+id/imgBtn_ProductLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="93dp"
+        android:layout_marginEnd="100dp"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
-            <ImageButton
-                android:id="@+id/incrBtn_ProductLayout"
-                android:layout_width="25dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@android:drawable/ic_menu_add" />
-
-            <EditText
-                android:id="@+id/editText_ProductNo_ProductLayout"
-                android:layout_width="60dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:background="@drawable/edittext_background"
-                android:ems="10"
-
-                android:inputType="numberSigned"
-                android:paddingLeft="15dp"
-                android:text="0" />
-
-            <ImageButton
-                android:id="@+id/decrBtn_ProductLayout"
-                android:layout_width="25dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                app:srcCompat="@android:drawable/ic_menu_info_details" />
-        </LinearLayout>
-
-    </LinearLayout>
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.mospro.cafehouse.Settings;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.mospro.cafehouse.LocateCafe;
 import com.mospro.cafehouse.R;
 
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
@@ -25,7 +27,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private void declare() {
         nameEt=(EditText)findViewById(R.id.editText_name_settingsActivity) ;
         tablesEt=(EditText)findViewById(R.id.editText_tableNo_SettingsActivity);
-        mainRef =FirebaseDatabase.getInstance().getReference().child("settings");
+        mainRef =FirebaseDatabase.getInstance().getReference();
         nextBtn =(Button)findViewById(R.id.btn_next_settingsActivity);
         nextBtn.setOnClickListener(this);
     }
@@ -35,9 +37,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         String name =nameEt.getText().toString() ;
         if(tablesNo!= 0|| TextUtils.isEmpty(name))
             {
-                mainRef.child("name").setValue(name) ;
-                mainRef.child("tablesNo").setValue(tablesNo);
-                Toast.makeText(this, "good", Toast.LENGTH_SHORT).show();
+                nameAndTables(tablesNo , name);
             }
     }
 
@@ -47,5 +47,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         {
             setData();
         }
+    }
+    void nameAndTables (Integer tablesNo , String name )
+    {
+        mainRef.child("settings").child("name").setValue(name) ;
+        mainRef.child("settings").child("tablesNo").setValue(tablesNo);
+        startActivity(new Intent(SettingsActivity.this , LocateCafe.class));
     }
 }

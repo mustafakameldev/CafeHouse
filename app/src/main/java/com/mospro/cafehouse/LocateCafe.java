@@ -44,6 +44,9 @@ import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.mospro.cafehouse.LiveActivity.LiveActivity;
 
 public class LocateCafe extends AppCompatActivity
 
@@ -144,6 +147,7 @@ public class LocateCafe extends AppCompatActivity
         switch ( item.getItemId() ) {
             case R.id.geofence: {
                 startGeofence();
+                startActivity(new Intent(LocateCafe.this , LiveActivity.class));
                 return true;
             }
             case R.id.clear: {
@@ -197,7 +201,7 @@ public class LocateCafe extends AppCompatActivity
         Log.w(TAG, "permissionsDenied()");
         // TODO close app and warn user
     }
-    // Initialize GoogleMaps
+    // Initialize GoogleMaps/home/muspro/Geek/AndroidStudioProjects/CafeHouse
     private void initGMaps(){
         mapFragment = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -431,7 +435,8 @@ public class LocateCafe extends AppCompatActivity
         Log.d(TAG, "saveGeofence()");
         SharedPreferences sharedPref = getPreferences( Context.MODE_PRIVATE );
         SharedPreferences.Editor editor = sharedPref.edit();
-
+        // M K : upload point geofence lat and log
+        uploadLocation( geoFenceMarker.getPosition().latitude ,geoFenceMarker.getPosition().longitude );
         editor.putLong( KEY_GEOFENCE_LAT, Double.doubleToRawLongBits( geoFenceMarker.getPosition().latitude ));
         editor.putLong( KEY_GEOFENCE_LON, Double.doubleToRawLongBits( geoFenceMarker.getPosition().longitude ));
         editor.apply();
@@ -445,12 +450,12 @@ public class LocateCafe extends AppCompatActivity
         if ( sharedPref.contains( KEY_GEOFENCE_LAT ) && sharedPref.contains( KEY_GEOFENCE_LON )) {
             double lat = Double.longBitsToDouble( sharedPref.getLong( KEY_GEOFENCE_LAT, -1 ));
             double lon = Double.longBitsToDouble( sharedPref.getLong( KEY_GEOFENCE_LON, -1 ));
+
             LatLng latLng = new LatLng( lat, lon );
             markerForGeofence(latLng);
             drawGeofence();
         }
     }
-
     // Clear LocateCompany
     private void clearGeofence() {
         Log.d(TAG, "clearGeofence()");
@@ -467,13 +472,21 @@ public class LocateCafe extends AppCompatActivity
             }
         });
     }
-
     private void removeGeofenceDraw() {
         Log.d(TAG, "removeGeofenceDraw()");
         if ( geoFenceMarker != null)
             geoFenceMarker.remove();
         if ( geoFenceLimits != null )
             geoFenceLimits.remove();
+    }
+
+
+    void uploadLocation(Double lat , Double log)
+    {
+
+        DatabaseReference mainRef = FirebaseDatabase.getInstance().getReference().child("settings").child("location");
+        mainRef.child("lat").setValue(lat);
+        mainRef.child("log").setValue(log);
     }
 
 }

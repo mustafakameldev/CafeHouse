@@ -14,6 +14,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.mospro.cafehouse.DataTypes.Item;
 import com.mospro.cafehouse.R;
 import java.util.ArrayList;
@@ -65,6 +67,12 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHol
                 }
             }
         });
+        productViewHolder.imgBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "hello", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     public int getItemCount() {
@@ -72,12 +80,10 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHol
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
-
-
         ImageButton incr , decr ;
         TextView name , price ;
         EditText itemsNo ;
-        ImageView img ;
+        ImageButton imgBtn ;
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
             incr =(ImageButton)itemView.findViewById(R.id.incrBtn_ProductLayout);
@@ -85,6 +91,7 @@ public class MenuAdapter extends RecyclerView.Adapter<MenuAdapter.ProductViewHol
             name =(TextView) itemView.findViewById(R.id.tv_name_ProductLayout);
             price =(TextView) itemView.findViewById(R.id.tv_price_ProductLayout);
             itemsNo =(EditText)itemView.findViewById(R.id.editText_ProductNo_ProductLayout) ;
+            imgBtn =(ImageButton)itemView.findViewById(R.id.imgBtn_ProductLayout);
 
         }
     }

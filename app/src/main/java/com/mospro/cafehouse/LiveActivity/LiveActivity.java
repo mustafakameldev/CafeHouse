@@ -29,7 +29,6 @@ public class LiveActivity extends AppCompatActivity {
             return false;
         }
     };
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,10 +38,7 @@ public class LiveActivity extends AppCompatActivity {
 
         OrdersFragment fragment = new OrdersFragment() ;
         getSupportFragmentManager().beginTransaction().replace(R.id.container1 ,fragment).commit() ;
-
     }
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_menu , menu);
@@ -50,7 +46,6 @@ public class LiveActivity extends AppCompatActivity {
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         if(item.getItemId() == R.id.menu_action)
         {
             startActivity(new Intent(LiveActivity.this , MenuActivity.class));
